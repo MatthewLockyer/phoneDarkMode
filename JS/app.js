@@ -31,6 +31,13 @@ const navSlide = () => {
 }
 
 
+// EITHER CLICKS OR TOUCHSTARTS DEPENDING ON DEVICE
+var clickEvent = (function() {
+    if ('ontouchstart' in document.documentElement === true)
+      return 'touchstart';
+    else
+      return 'click';
+})();
 
 
 
@@ -38,7 +45,7 @@ var item = document.querySelectorAll('.item');
 
 item.forEach((select) => {
 
-        select.addEventListener('click', () => {
+        select.addEventListener(clickEvent, () => {
 
             item.forEach((button) => {
                 button.classList.remove('selectedItem')
