@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  all: unset;
+}
+
+@import "./abstracts/variables";
+@import "./abstracts/function/mixins";
+@import "./abstracts/type";
+@import "./components/nav";
+@import "./components/buttons";
+@import "./sections/hero";
+@import "./utilities/sectionControl";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.parent {
+  @include flexAlternate(400px);
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.parent2 {
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  @include flexAlternate(500px);
+}
+
+@media only screen and (max-width: 768px) {
+  .parent,
+  .parent2 {
+    flex-direction: column;
+
+    .child {
+      width: 100%;
+    }
+  }
+}
