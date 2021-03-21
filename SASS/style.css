@@ -299,10 +299,28 @@ button {
 .hero {
   height: 100vh;
   width: 100%;
+  padding-top: 10vh;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 1em;
+  width: 100%;
+}
+
+.title h1 {
+  font-size: 2rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.title h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 
 .selection {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,13 +332,12 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 30vh;
+  padding-top: 5vh;
 }
 
 .selection .item {
-  width: 24%;
-  min-width: 45px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   -webkit-box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
           box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
@@ -339,13 +356,65 @@ button {
 
 .selection .item i {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .selection .selectedItem {
   background: linear-gradient(-45deg, #6900ca, #0000c5);
   -webkit-box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
           box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
+}
+
+.homeNav {
+  position: absolute;
+  bottom: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+  -webkit-box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
+          box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
+  border-radius: 20px;
+}
+
+.homeNav .homeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(-45deg, #6900ca, #0000c5);
+  -webkit-box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
+          box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.homeNav .homeButton h3 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-left: 20px;
+}
+
+.homeNav i {
+  color: #e4e4e4;
 }
 
 .container {
