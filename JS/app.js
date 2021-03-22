@@ -19,6 +19,7 @@ const navSlide = () => {
     // TOGGLE NAV
     burgerMenu.addEventListener(clickEvent, () => {
         navLinks.classList.toggle('navLinksShow')
+        burgerMenu.classList.toggle('menuOpen')
 
         navLink.forEach((link, index) => {
             if(link.style.animation) {
