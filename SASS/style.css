@@ -139,8 +139,9 @@ nav .burgerMenu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -157,8 +158,16 @@ nav .burgerMenu .navLine {
   width: 25px;
   background: #f1f1f1;
   margin: 3px 0;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+}
+
+nav .menuOpen {
+  -webkit-box-shadow: inset -2px -2px 5px #262626, inset 3px 3px 5px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: inset -2px -2px 5px #262626, inset 3px 3px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+nav .menuOpen .navLine {
+  width: 20px;
+  margin: 2px 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -360,9 +369,9 @@ button {
 }
 
 .selection .selectedItem {
-  background: linear-gradient(-45deg, #6900ca, #0000c5);
-  -webkit-box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
-          box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
+  background: linear-gradient(-45deg, #ca1800, #c55900);
+  -webkit-box-shadow: -2px -2px 18px rgba(197, 89, 0, 0.753), 3px 3px 18px rgba(202, 24, 0, 0.767);
+          box-shadow: -2px -2px 18px rgba(197, 89, 0, 0.753), 3px 3px 18px rgba(202, 24, 0, 0.767);
 }
 
 .homeNav {
@@ -387,6 +396,7 @@ button {
   -webkit-box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
           box-shadow: -2px -2px 8px #262626, 3px 3px 8px rgba(0, 0, 0, 0.678);
   border-radius: 20px;
+  font-size: 1.25rem;
 }
 
 .homeNav .homeButton {
@@ -400,11 +410,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(-45deg, #6900ca, #0000c5);
-  -webkit-box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
-          box-shadow: -2px -2px 18px rgba(0, 0, 197, 0.753), 3px 3px 18px rgba(104, 0, 202, 0.774);
+  background: linear-gradient(-45deg, #ca1800, #c55900);
+  -webkit-box-shadow: -2px -2px 18px rgba(197, 89, 0, 0.753), 3px 3px 18px rgba(202, 24, 0, 0.767);
+          box-shadow: -2px -2px 18px rgba(197, 89, 0, 0.753), 3px 3px 18px rgba(202, 24, 0, 0.767);
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 10px 15px;
 }
 
 .homeNav .homeButton h3 {
